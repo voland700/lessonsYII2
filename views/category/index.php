@@ -71,7 +71,7 @@ use yii\helpers\Html;
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-sm-3">Add to cart
                 <div class="left-sidebar">
                     <h2>Category</h2>
                     <ul class="catalog category-products">
@@ -122,7 +122,10 @@ use yii\helpers\Html;
                                     </a>
                                     <h2>$<?= $hit->price ?></h2>
                                     <p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>"><?= $hit->name ?></a></p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                                    <a href="<?= \yii\helpers\Url::to(['cart/add', 'id'=>$hit->id])  ?>" data-id="<?=$hit->id;?>"
+                                    class="btn btn-default add-to-cart">
+                                        <i class="fa fa-shopping-cart"></i>Add to cart
+                                    </a>
                                 </div>
                                 <? if($hit->new): ?>
                                     <?= Html::img("@web/images/home/new.png", ['class' => 'new', 'alt' => 'Новинка'])?>
