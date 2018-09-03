@@ -16,7 +16,7 @@
                 <td><?= $item['img'] ?></td>
                 <td><?= $item['name'] ?></td>
                 <td><?= $item['qty'] ?></td>
-                <td><?= $item['rice'] ?></td>
+                <td><?= $item['price'] ?></td>
                 <td><span class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
             </tr>
         <? endforeach; ?>
