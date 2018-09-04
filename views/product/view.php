@@ -95,16 +95,15 @@ use yii\helpers\Html;
 								<span>
 									<span>US $<?= $product->price ?></span>
 									<label>Quantity:</label>
-									<input type="text" value="1" />
-									<button type="button" class="btn btn-fefault cart">
-										<i class="fa fa-shopping-cart"></i>
-Add to cart
-</button>
+									<input type="text" id="qty" value="1" />
+									<a data-id="<?= $product->id ?>" class="btn btn-fefault add-to-cart cart">
+										<i  class="fa fa-shopping-cart"></i>Add to cart
+                                    </a>
 								</span>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
                                 <p><b>Brand:</b> <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $product->category->id])?>"><?= $product->category->name ?></a></p>
-								<a href=""><img src="/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
+								<a href="#"><img src="/images/product-details/share.png" class="share img-responsive"  alt="" /></a>
 							</div><!--/product-information-->
 						</div>
 					</div><!--/product-details-->
